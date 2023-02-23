@@ -20,11 +20,6 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
-  example-job:
-    docker:
-      # replace with your preferred image
-      - image: cimg/base:stable
-    steps:
       - go/install
       - run: go build ./...
 
@@ -34,4 +29,3 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
-      - example-job
